@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AndroidApp</string>
+    <string name="textfield_label">text_field_label</string>
+    <string name="page_title">Menu</string>
+    <string name="favorite">favorite</string>
+    <string name="content_description_favorite">content_description_favorite</string>
+    <string name="search">search</string>
+    <string name="content_description_search">content_description_search</string>
+    <string name="more">more</string>
+    <string name="content_description_more">content_description_more</string>
+    <string name="content_description_media" >content_description_media</string>
+    <string name="checkbox_text_1">checkbox_1</string>
+    <string name="checkbox_text_2">checkbox_2</string>
+    <string name="chip_text_1">Search</string>
+    <string name="chip_text_2">Off</string>
+    <string name="chip_text_3">Room</string>
+    <string name="chip_text_4">Settings</string>
 </resources>

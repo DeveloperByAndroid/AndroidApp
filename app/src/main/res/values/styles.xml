@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CheckBox -->
+    <style name="CheckBox" parent="android:Widget.Material.CompoundButton.CheckBox">
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:shadowDx">10</item>
+        <item name="android:shadowDy">10</item>
+        <item name="android:shadowRadius">10</item>
+    </style>
+    <style name="CheckBox.RedShadow">
+        <item name="android:shadowColor">@color/cs_shadow_red</item>
+    </style>
+    <style name="CheckBox.GreenShadow">
+        <item name="android:shadowColor">@color/cs_shadow_green</item>
+    </style>
+
+    <!-- Chip Group -->
+    <style name="ChipGroup" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipSpacingHorizontal">2dp</item>
+        <item name="android:paddingHorizontal">10dp</item>
+        <item name="singleLine">false</item>
+        <item name="singleSelection">false</item>
+    </style>
+
+    <!-- Chip -->
+    <style name="ChipChoice" parent="android:Widget">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeColor">@color/cs_stroke_tint</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+</resources>

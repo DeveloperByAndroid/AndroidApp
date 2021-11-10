@@ -6,13 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Top menu -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:liftOnScroll="true"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/ic_menu_24dp"
+            app:title="@string/page_title" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- CPC 7 -->
+    <LinearLayout
+        android:id="@+id/appCheckBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        <CheckBox
+            style="@style/CheckBox.GreenShadow"
+            android:checked="true"
+            android:text="@string/checkbox_text_1" />
+        <CheckBox
+            style="@style/CheckBox.RedShadow"
+            android:text="@string/checkbox_text_2" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/appChipsLayout"
+        style="@style/ChipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCheckBoxLayout"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            app:singleLine="true"
+            app:chipSpacingHorizontal="5dp"
+            app:chipSpacingVertical="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip"
+                style="@style/Theme.ChipChoice"
+                app:chipIconTint="@color/cs_shadow_green"
+                app:chipIcon="@drawable/ic_search_24dp"
+                android:text="@string/chip_text_1" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Theme.ChipChoice"
+                app:chipIconTint="@color/cs_red"
+                app:chipIcon="@drawable/highlight_off_24"
+                android:text="@string/chip_text_2" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                style="@style/Theme.ChipChoice"
+                app:chipIconTint="@color/cs_red"
+                app:chipIcon="@drawable/room_24"
+                android:text="@string/chip_text_3" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/Theme.ChipChoice"
+                app:chipIconTint="@color/cs_stroke_tint"
+                app:chipIcon="@drawable/settings_24"
+                android:text="@string/chip_text_4" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+    <!-- End CPC 7 -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
